@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senac.aula.cadastroClientes.controller.ClientController">
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="658.0" prefWidth="794.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="714.0">
+                     <children>
+                        <AnchorPane layoutY="14.0" prefHeight="242.0" prefWidth="786.0">
+                           <children>
+                              <TextField fx:id="nomeCliente" layoutX="14.0" layoutY="37.0" prefHeight="31.0" prefWidth="247.0" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="525.0" AnchorPane.topAnchor="37.0" />
+                              <TextField fx:id="documentoCliente" layoutX="317.0" layoutY="37.0" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="317.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="37.0" />
+                              <TextField fx:id="rgCliente" layoutX="575.0" layoutY="37.0" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="575.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="37.0" />
+                              <TextField fx:id="emailCliente" layoutX="14.0" layoutY="106.0" prefHeight="31.0" prefWidth="248.0" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="524.0" AnchorPane.topAnchor="106.0" />
+                              <TextField fx:id="telefoneCliente" layoutX="317.0" layoutY="106.0" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="317.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="106.0" />
+                              <Button fx:id="btnSalvarCliente" layoutX="33.0" layoutY="175.0" mnemonicParsing="false" onAction="#executarSalvarCliente" text="Salvar" />
+                              <Button fx:id="btnExcluirCliente" layoutX="138.0" layoutY="175.0" mnemonicParsing="false" onAction="#executarExcluirCliente" text="Excluir" />
+                              <Text layoutX="13.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome*" />
+                              <Text layoutX="12.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                              <Text layoutX="317.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documento*" />
+                              <Text layoutX="575.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" />
+                              <Text layoutX="317.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" />
+                              <Button fx:id="btnCadastrarEndereco" layoutX="603.0" layoutY="175.0" mnemonicParsing="false" onAction="#cadastrarEndereco" text="Cadastrar Endereço" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="-2.0" layoutY="253.0" prefHeight="362.0" prefWidth="794.0">
+                           <children>
+                              <TableView fx:id="tabelaCliente" layoutX="4.0" prefHeight="358.0" prefWidth="786.0">
+                                <columns>
+                                  <TableColumn fx:id="clnIDCliente" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="clnNomeCliente" prefWidth="203.0" text="Nome" />
+                                    <TableColumn fx:id="clnEmailCliente" prefWidth="195.0" text="Email" />
+                                    <TableColumn fx:id="clnDocumentoCliente" prefWidth="94.0" text="Documento" />
+                                    <TableColumn fx:id="clnRGCliente" prefWidth="111.0" text="RG" />
+                                    <TableColumn fx:id="clnTelefoneCliente" prefWidth="107.0" text="Telefone" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabEndereco" text="Endereço">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutY="14.0" prefHeight="242.0" prefWidth="787.0">
+                           <children>
+                              <TextField fx:id="codigoClienteEndereco" layoutX="14.0" layoutY="33.0" />
+                              <TextField fx:id="cepEndereco" layoutX="272.0" layoutY="33.0" />
+                              <TextField fx:id="bairroEndereco" layoutX="536.0" layoutY="33.0" />
+                              <TextField fx:id="numeroEndereco" layoutX="14.0" layoutY="106.0" />
+                              <TextField fx:id="cidadeEndereco" layoutX="272.0" layoutY="106.0" />
+                              <TextField fx:id="estadoEndereco" layoutX="536.0" layoutY="106.0" />
+                              <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo CLiente" />
+                              <Text layoutX="272.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cep" />
+                              <Text layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero" />
+                              <Text layoutX="536.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro" />
+                              <Text layoutX="272.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade" />
+                              <Text layoutX="536.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+                              <Button fx:id="btnSalvarEndereco" layoutX="36.0" layoutY="172.0" mnemonicParsing="false" onAction="#executarSalvarEndereco" text="Salvar" />
+                              <Button fx:id="btnExcluirEndereco" layoutX="136.0" layoutY="172.0" mnemonicParsing="false" onAction="#executarExcluirEndereco" text="Excluir" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="256.0" prefHeight="359.0" prefWidth="781.0">
+                           <children>
+                              <TableView fx:id="tabelaEndereco" layoutX="-12.0" prefHeight="356.0" prefWidth="794.0">
+                                <columns>
+                                  <TableColumn fx:id="clnIDClienteEndereco" prefWidth="88.0" text="ID Cliente" />
+                                  <TableColumn fx:id="clnCepEndereco" prefWidth="153.0" text="CEP" />
+                                    <TableColumn fx:id="clnBairroEndereco" prefWidth="175.0" text="Bairro" />
+                                    <TableColumn fx:id="clnNumeroEndereco" prefWidth="79.0" text="Numero" />
+                                    <TableColumn fx:id="clnCidadeEndereco" prefWidth="151.0" text="Cidade" />
+                                    <TableColumn fx:id="clnEstadoEndereco" prefWidth="147.0" text="Estado" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

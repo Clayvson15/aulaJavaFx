@@ -1,0 +1,19 @@
+CREATE TABLE public.clientes (
+	id serial4 PRIMARY KEY NOT NULL ,
+	nome varchar NOT NULL,
+	documento varchar NOT NULL unique,
+	 rg varchar NULL,
+	 email varchar NULL ,
+	 telefone varchar NULL 
+);
+
+
+CREATE TABLE public.enderecos (
+id_cliente INTEGER NOT NULL,
+cep varchar NOT NULL ,
+bairro varchar NOT NULL ,
+numero varchar NOT NULL ,
+cidade varchar NOT NULL ,
+estado varchar NOT NULL,
+FOREIGN KEY (id_cliente) REFERENCES clientes(id)
+);
