@@ -446,7 +446,7 @@ public class ClientController {
     public void alertaCampoInvalido(String texto){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(texto+ " Invalido");
-        alert.setHeaderText(texto +" Informado Invalido, Digite apenas numeros.");
+        alert.setHeaderText(texto +" Informadooo Invalido, Digite apenas numeros.");
         alert.showAndWait();
     }
 }
